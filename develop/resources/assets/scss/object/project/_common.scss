@@ -1,0 +1,16 @@
+.c-section{
+  margin-top: 9.5rem;
+  margin-right: 3.5vw;
+  margin-left: 3.5vw;
+  
+  @media (--mobile) {
+    margin-right: 6vw;
+    margin-left: 6vw;
+  }
+}
+
+.c-ttl{
+  font-size: 3.6rem;
+  margin-bottom: 5.4rem;
+  text-align: center;
+}

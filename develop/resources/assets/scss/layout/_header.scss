@@ -1,9 +1,8 @@
-
-@media (--large) {
-
+.l-header{
+  height: 8.8rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #EA8315;
 }
-//end @media (--large)
-
-@media (--mobile) {
-}
-//end @media (--mobile)

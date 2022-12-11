@@ -1,0 +1,63 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    include /mixin/meta
+    +meta({
+        title:"website title"
+    })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+    .l-main.p-top
+      main
+        .p-top__inner.c-inner
+          include /elements/side-left
+          .top-center.c-center__inner          
+            include /elements/header
+            .center-inner 
+              .center-mv.article-mv
+                picture 
+                  source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                  img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+              section.center-article.c-section
+                h3.center-article__ttl.c-ttl
+                  |仕事
+                ul.center-article__list 
+                  |<?php
+                  |/* （ステップ1）データの取得 */
+                  |$query = new WP_Query(
+                  |    array(
+                  |        'post_type' => 'job',
+                  |        'posts_per_page' => 8,
+                  |    )
+                  |);
+                  |?>
+                  |<?php
+                  |/* （ステップ2）データの表示 */
+                  |if ( $query->have_posts() ) : ?>
+                  |<?php while ( $query->have_posts() ) : $query->the_post();?>
+                  li.center-article__item 
+                    a(href!="<?php the_permalink(); ?>").center-article__link
+                    .center-article__img  
+                      picture 
+                        source(type="" media="(max-width:768px)" srcset!="<?php the_post_thumbnail_url(); ?>")
+                        img(src!="<?php the_post_thumbnail_url(); ?>")
+                    .center-article__content 
+                      .center-article__heading
+                        time 
+                          |<?php the_time(Y年n月j日); ?>
+                        a(href="") 
+                          |<?php the_category("テスト"); ?>
+                      .center-article__text
+                        p 
+                          |<?php the_title(); ?>
+                  |<?php endwhile; ?>                
+                  |<?php endif; wp_reset_postdata(); ?>
+
+ 
+                .center-article__pagenation 
+            include /elements/footer
+          include /elements/side-right    
+    include /elements/body-append

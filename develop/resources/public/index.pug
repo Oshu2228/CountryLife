@@ -10,9 +10,97 @@ html(lang="ja")
     |<?php wp_head(); ?>
   body
     include /elements/body-preppend
-    include /elements/header
-    .l-main
+    .l-main.p-top
       main
-
-    include /elements/footer
+        .p-top__inner.c-inner
+          include /elements/side-left
+          .top-center.c-center__inner          
+            include /elements/header
+            .center-inner 
+              .center-mv
+                picture 
+                  source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                  img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+              section.center-article.c-section
+                h3.center-article__ttl.c-ttl
+                  |最新記事
+                ul.center-article__list 
+                  li.center-article__item 
+                    a(href="").center-article__link
+                    .center-article__img  
+                      picture 
+                        source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                    .center-article__content 
+                      .center-article__heading
+                        time 2022.12,1
+                        a(href="") カテゴリー
+                      .center-article__text
+                        p 
+                          |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー…
+                  li.center-article__item 
+                    a(href="").center-article__link
+                    .center-article__img  
+                      picture 
+                        source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                        img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/dummy.png")
+                    .center-article__content 
+                      .center-article__heading
+                        time 2022.12,1
+                        a(href="") カテゴリー
+                      .center-article__text
+                        p 
+                          |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー…
+              section.center-about.c-section
+                h3.center-about__ttl.c-ttl
+                  |私たちについて
+                .center-about__content 
+                  h4.content-ttl 
+                    |地方同棲という選択肢を
+                  .content-text 
+                    p 
+                      |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                    p 
+                      |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                    p 
+                      |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+              section.center-name
+                h3.center-name__ttl.c-ttl
+                  |自己紹介
+                .center-name__content 
+                  .content-img 
+                    picture 
+                      source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/top/person01.png")
+                      img(src!="<?php echo get_template_directory_uri(); ?>/common/images/top/person01.png")
+                  .content-inner 
+                    .content-heading 
+                      p 
+                        span.name 山田太郎
+                        span.birth 1999年1月1日生まれ
+                    .content-text 
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                .center-name__content.f-rev
+                  .content-img 
+                    picture 
+                      source(type="" media="(max-width:768px)" srcset!="<?php echo get_template_directory_uri(); ?>/common/images/top/person02.png")
+                      img(src!="<?php echo get_template_directory_uri(); ?>/common/images/top/person02.png")
+                  .content-inner 
+                    .content-heading 
+                      p 
+                        span.name 山田太郎
+                        span.birth 1999年1月1日生まれ
+                    .content-text 
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+                      p 
+                        |ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+            include /elements/footer
+          include /elements/side-right    
     include /elements/body-append

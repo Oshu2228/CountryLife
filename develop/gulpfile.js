@@ -18,7 +18,7 @@ config.paths = {
   wwwroot: "../themes/dev_thema/",
 
   //MAMPで設定したURL
-  proxy: "http://*********/",
+  proxy: "http://localhost:8888/",
 
   getSrc: function () {
     return this.src;

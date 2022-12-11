@@ -1,0 +1,11 @@
+.c-inner{
+  display: flex;
+}
+
+.c-center__inner{
+  width:calc(540 / 1440 * 100%);
+  @media (--mobile) {
+    width: 100%;
+  }
+}
+

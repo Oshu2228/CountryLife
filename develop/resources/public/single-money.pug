@@ -1,0 +1,40 @@
+//- doctype html
+//- html(lang="ja")
+//-   head
+//-     include /elements/head-property
+//-     include /elements/head-assets
+//-     include /mixin/meta
+//-     +meta({
+//-         title:"website title"
+//-     })
+//-     |<?php wp_head(); ?>
+//-   body
+//-     include /elements/body-preppend
+//-     .l-main.p-top
+//-       main
+//-         .p-top__inner.c-inner
+//-           include /elements/side-left
+//-           .top-center.c-center__inner          
+//-             include /elements/header 
+//-             .article    
+//-               |/* （ステップ2）データの表示 */
+//-               |if ( $query->have_posts() ) : ?>
+//-               |<?php while ( $query->have_posts() ) : $query->the_post();?>
+//-               .center-mv.article-mv
+//-                 picture 
+//-                   source(type="" media="(max-width:768px)" srcset!="<?php the_post_thumbnail_url(); ?>")
+//-                   img(src!="<?php the_post_thumbnail_url(); ?>")
+//-               section.center-article.c-section
+//-                 h3.center-article__ttl.c-ttl
+//-                   |<?php the_title(); ?>
+//-               |<?php endwhile; ?>                                   
+//-               .center-mv.article-mv
+//-                 picture 
+//-                   source(type="" media="(max-width:768px)" srcset!="<?php the_post_thumbnail_url(); ?>")
+//-                   img(src!="<?php the_post_thumbnail_url(); ?>")
+//-               section.center-article.c-section
+//-                 h3.center-article__ttl.c-ttl
+//-                   |<?php the_title(); ?>
+//-             include /elements/footer
+//-           include /elements/side-right    
+//-     include /elements/body-append
